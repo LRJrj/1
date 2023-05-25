@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;.\OpenCV GPU\include;.\TensorRT-8.0.1.6\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_MWAITXINTRIN_H_INCLUDED;_CRT_SECURE_NO_WARNINGS;NOMINMAX;API_EXPORTS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <AdditionalOptions>%(AdditionalOptions) -std=c++11 -Ofast -std=c++11</AdditionalOptions>
+    </ClCompile>
+    <CudaCompile>
+      <Include>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;.\TensorRT-8.0.1.6\include;%(Include)</Include>
+      <AdditionalOptions>%(AdditionalOptions) -std=c++11 -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+    </CudaCompile>
+    <Link>
+      <AdditionalLibraryDirectories>.\OpenCV GPU\x64\vc16\lib;.\TensorRT-8.0.1.6\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>nvinfer.lib;nvinfer_plugin.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\lib\x64\cudart.lib;cudadevrt.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;opencv_aruco450d.lib;opencv_bgsegm450d.lib;opencv_bioinspired450d.lib;opencv_calib3d450d.lib;opencv_ccalib450d.lib;opencv_core450d.lib;opencv_cudaarithm450d.lib;opencv_cudabgsegm450d.lib;opencv_cudacodec450d.lib;opencv_cudafeatures2d450d.lib;opencv_cudafilters450d.lib;opencv_cudaimgproc450d.lib;opencv_cudalegacy450d.lib;opencv_cudaobjdetect450d.lib;opencv_cudaoptflow450d.lib;opencv_cudastereo450d.lib;opencv_cudawarping450d.lib;opencv_cudev450d.lib;opencv_datasets450d.lib;opencv_dnn_objdetect450d.lib;opencv_dnn_superres450d.lib;opencv_dnn450d.lib;opencv_dpm450d.lib;opencv_features2d450d.lib;opencv_flann450d.lib;opencv_fuzzy450d.lib;opencv_gapi450d.lib;opencv_hfs450d.lib;opencv_highgui450d.lib;opencv_img_hash450d.lib;opencv_imgcodecs450d.lib;opencv_imgproc450d.lib;opencv_intensity_transform450d.lib;opencv_line_descriptor450d.lib;opencv_mcc450d.lib;opencv_ml450d.lib;opencv_objdetect450d.lib;opencv_optflow450d.lib;opencv_phase_unwrapping450d.lib;opencv_photo450d.lib;opencv_plot450d.lib;opencv_quality450d.lib;opencv_rapid450d.lib;opencv_reg450d.lib;opencv_rgbd450d.lib;opencv_saliency450d.lib;opencv_shape450d.lib;opencv_stereo450d.lib;opencv_stitching450d.lib;opencv_structured_light450d.lib;opencv_superres450d.lib;opencv_surface_matching450d.lib;opencv_text450d.lib;opencv_tracking450d.lib;opencv_video450d.lib;opencv_videoio450d.lib;opencv_videostab450d.lib;opencv_xfeatures2d450d.lib;opencv_ximgproc450d.lib;opencv_xobjdetect450d.lib;opencv_xphoto450d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Link>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets %(AdditionalOptions)</AdditionalOptions>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

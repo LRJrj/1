@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/close.png</file>
+        <file>image/close_hover.png</file>
+        <file>image/minimize.png</file>
+        <file>image/minimize_hover.png</file>
+        <file>image/nimte.png</file>
+        <file>image/setting.png</file>
+        <file>image/setting_hover.png</file>
+        <file>image/windowIcon.png</file>
+        <file>image/close.png</file>
+        <file>image/close_hover.png</file>
+        <file>image/CZ_027.png</file>
+        <file>image/nimte.png</file>
+        <file>image/setting.png</file>
+        <file>image/setting_hover.png</file>
+        <file>image/windowIcon.png</file>
+        <file>image/nimte.png</file>
+        <file>image/setting.png</file>
+        <file>image/setting_hover.png</file>
+        <file>image/windowIcon.png</file>
+        <file>image/nimte.png</file>
+        <file>image/windowIcon.png</file>
+    </qresource>
+</RCC>
